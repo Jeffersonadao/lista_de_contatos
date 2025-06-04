@@ -1,105 +1,116 @@
-📱 Lista de Contatos
+# 📱 Lista de Contatos
 
-Um aplicativo Flutter para cadastro, listagem, edição e remoção de contatos, integrado ao Back4App como backend (Parse Server). Permite o gerenciamento de uma lista de contatos com informações como nome, idade, telefone, e-mail e foto de perfil.
+Um aplicativo Flutter para cadastro, listagem, edição e remoção de contatos, integrado ao **Back4App** como backend (Parse Server). Permite o gerenciamento de uma lista de contatos com informações como nome, idade, telefone, e-mail e foto de perfil.
 
-🚀 Funcionalidades
+---
 
-✅ Listagem de contatos com dados armazenados no Back4App.
+## 🚀 Funcionalidades
 
-✅ Cadastro de novos contatos.
+- ✅ Listagem de contatos com dados armazenados no Back4App.
+- ✅ Cadastro de novos contatos.
+- ✅ Edição dos dados dos contatos.
+- ✅ Remoção de contatos.
+- ✅ Upload e edição (crop) de foto de perfil.
+- ✅ Validação de e-mail, telefone e idade.
+- ✅ Integração completa via REST API com Back4App.
+- ✅ Interface moderna e intuitiva usando Flutter e pacotes de ícones.
 
-✅ Edição dos dados dos contatos.
+---
 
-✅ Remoção de contatos.
+## 🛠️ Tecnologias e Dependências
 
-✅ Upload e edição (crop) de foto de perfil.
+- **Flutter**
+- **Dart**
+- **Back4App (Parse Server)** — Backend em nuvem
+- **HTTP** — Comunicação com a API REST
+- **Image Picker** — Captura de imagens da câmera e galeria
+- **Image Cropper** — Corte de imagem para fotos de perfil
+- **Font Awesome Flutter** — Ícones estilizados
+- **Brasil Fields** — Máscara de telefone (formatação brasileira)
+- **Email Validator** — Validação de e-mails
 
-✅ Validação de e-mail, telefone e idade.
+---
 
-✅ Integração completa via REST API com Back4App.
+## 🗂️ Estrutura de Pastas
 
-✅ Interface moderna e intuitiva usando Flutter e pacotes de ícones.
+```
+lib/
+├── models/          # Modelos de dados (PessoaModel, CardContatoModel)
+├── pages/           # Telas (HomePage, FormularioContatoPage)
+├── main.dart        # Arquivo principal
+```
 
-🛠️ Tecnologias e Dependências
-
-Flutter
-
-Dart
-
-Back4App (Parse Server) — Backend em nuvem
-
-HTTP — Comunicação com a API REST
-
-Image Picker — Captura de imagens da câmera e galeria
-
-Image Cropper — Corte de imagem para fotos de perfil
-
-Font Awesome Flutter — Ícones estilizados
-
-Brasil Fields — Máscara de telefone (formatação brasileira)
-
-Email Validator — Validação de e-mails
+---
 
 
+### 📄 Estrutura da Classe `Pessoa` no Back4App:
 
-📄 Estrutura da Classe Pessoa no Back4App:
+| Campo      | Tipo   | Descrição                 |
+| ----------- | ------ | -------------------------- |
+| objectId    | String | ID gerado automaticamente |
+| nome        | String | Nome do contato           |
+| idade       | Int    | Idade do contato          |
+| telefone    | String | Telefone                  |
+| email       | String | E-mail                    |
+| imagePath   | String | Caminho da imagem         |
+| createdAt   | Date   | Data de criação           |
+| updatedAt   | Date   | Data de atualização       |
 
-Campo	Tipo	Descrição
-objectId	String	ID gerado automaticamente
-nome	String	Nome do contato
-idade	Int	Idade do contato
-telefone	String	Telefone
-email	String	E-mail
-imagePath	String	Caminho da imagem
-createdAt	Date	Data de criação
-updatedAt	Date	Data de atualização
+---
 
-🖥️ Telas do App
+## 🖥️ Telas do App
 
-Tela inicial: Lista todos os contatos cadastrados.
+- **Tela inicial:** Lista todos os contatos cadastrados.
+- **Tela de formulário:** Permite adicionar ou editar os dados de um contato, com validações e upload de foto.
+- **Upload de imagem:** Seleção por câmera ou galeria, com opção de crop quadrado.
 
-Tela de formulário: Permite adicionar ou editar os dados de um contato, com validações e upload de foto.
+---
 
-Upload de imagem: Seleção por câmera ou galeria, com opção de crop quadrado.
+## ⚙️ Como executar
 
-⚙️ Como executar
-Clone o repositório:
+1. Clone o repositório:
 
-bash
-Copiar
-Editar
+```bash
 git clone https://github.com/Jeffersonadao/lista_de_contatos.git
 cd lista_de_contatos
-Instale as dependências:
+```
 
-bash
-Copiar
-Editar
+2. Instale as dependências:
+
+```bash
 flutter pub get
-Execute o projeto:
+```
 
-bash
-Copiar
-Editar
+3. Execute o projeto:
+
+```bash
 flutter run
+```
 
-💡 Observações
+---
 
-Para funcionar corretamente, é necessário ter um projeto ativo no Back4App com a classe Pessoa criada, e os campos corretamente definidos.
+## 💡 Observações
+
+- Para funcionar corretamente, é necessário ter um projeto ativo no **Back4App** com a classe `Pessoa` criada, e os campos corretamente definidos.
 
 
-📝 Melhorias Futuras
+---
 
-🔄 Upload real de imagens para armazenamento na nuvem (ex.: Firebase Storage ou Parse Files).
+## 📝 Melhorias Futuras
 
-🔍 Implementar busca de contatos.
+- 🔄 Upload real de imagens para armazenamento na nuvem (ex.: Firebase Storage ou Parse Files).
+- 🔍 Implementar busca de contatos.
+- 🌙 Tema claro/escuro.
+- 🔔 Notificações.
 
-🌙 Tema claro/escuro.
+---
 
-🔔 Notificações.
+## 👨‍💻 Desenvolvedor
 
-👨‍💻 Desenvolvedor
-Feito com ❤️ por Jefferson Adao
+Feito com ❤️ por [Jefferson Adao](https://github.com/Jeffersonadao)
 
-📜 Licença
+---
+
+## 📜 Licença
+
 Este projeto é livre para uso acadêmico e pessoal.
