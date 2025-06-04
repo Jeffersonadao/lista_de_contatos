@@ -1,0 +1,29 @@
+# Marcar arquivos Dart como código principal
+*.dart linguist-detectable=true
+
+# Marcar arquivos Kotlin e Swift como código também
+*.kt linguist-detectable=true
+*.kts linguist-detectable=true
+*.swift linguist-detectable=true
+
+# Incluir arquivos YAML (ex: pubspec.yaml) para a detecção
+*.yaml linguist-detectable=true
+
+# Marcar arquivos de documentação
+*.md linguist-documentation
+
+# Marcar arquivos JSON e outros gerados como gerados (não código principal)
+*.json linguist-generated
+*.lock linguist-generated
+
+# Ignorar pastas de build e geradas (não contam para linguagem)
+build/* linguist-vendored
+.generated/* linguist-vendored
+.idea/* linguist-vendored
+.packages linguist-generated
+.flutter-plugins linguist-generated
+.flutter-plugins-dependencies linguist-generated
+
+# Ignorar pastas nativas de build
+android/build/* linguist-vendored
+ios/Pods/* linguist-vendored
